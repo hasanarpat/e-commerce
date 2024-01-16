@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--main-color);
+  padding: var(--global-padding);
+  font-size: 14px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.link {
+  font-weight: 500;
+}
+
+.link::after {
+  margin-left: 10px;
+  content: '|';
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.link:last-child::after {
+  content: '';
+  margin-left: 0;
+}
