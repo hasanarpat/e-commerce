@@ -1,12 +1,17 @@
-.container {
+.desktopContainer {
+  display: none;
+}
+
+.mobileContainer {
+  display: block;
   width: 100%;
   height: 50rem;
   position: relative;
   background: url('https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_787,c_limit/11ee6abf-3f34-4489-bcb0-b9e805df5157/resmi-nike-sitesi.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
-
 .desc {
   position: absolute;
   left: 10px;
@@ -15,6 +20,28 @@
   flex-direction: column;
   gap: 30px;
   color: white;
+}
+
+.desktopContainer .desc {
+  height: 100%;
+  bottom: 0px;
+  justify-content: space-between;
+  padding: 4rem 1rem;
+}
+
+.desktopContainer .desc .model {
+  gap: 0px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.subTitle {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: 0px;
 }
 
 .model {
@@ -32,18 +59,34 @@
 }
 
 .link {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 1);
   color: black;
-  border-radius: 10px;
-  max-width: 120px;
+  border-radius: 25px;
+  max-width: 90px;
   padding: 10px;
   text-align: center;
   transition: all 0.2s ease-in;
   border: none;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .link:hover {
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
-  border: 1px solid white;
+}
+
+@media (min-width: 720px) {
+  .mobileContainer {
+    display: none;
+  }
+  .desktopContainer {
+    display: block;
+    background: url('https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_1379,c_limit/8abbba21-df3f-4bd7-92d0-06a52f913e20/resmi-nike-sitesi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 18/6;
+    position: relative;
+    cursor: pointer;
+  }
 }
